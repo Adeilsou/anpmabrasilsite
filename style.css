@@ -565,22 +565,29 @@ h4 {
     margin-bottom: 20px;
 }
 
+.footer-brand {
+    display: flex;
+    /* Ativa o Flexbox */
+    flex-direction: column;
+    /* Coloca os elementos em coluna (um embaixo do outro) */
+    align-items: center;
+    /* Centraliza a imagem e o texto horizontalmente */
+    text-align: center;
+    /* Centraliza o texto dentro do parágrafo */
+}
+
+.footer-logo {
+    max-width: 150px;
+    /* Ajuste o tamanho da logo conforme necessário */
+    margin-bottom: 15px;
+    /* Dá um espaço entre a logo e o texto embaixo */
+}
+
 .footer-brand .footer-logo {
     width: 80px;
     height: 80px;
     border-radius: 10px;
     margin-bottom: 15px;
-}
-.footer-brand {
-    display: flex;          /* Ativa o Flexbox */
-    flex-direction: column; /* Coloca os elementos em coluna (um embaixo do outro) */
-    align-items: center;    /* Centraliza a imagem e o texto horizontalmente */
-    text-align: center;     /* Centraliza o texto dentro do parágrafo */
-}
-
-.footer-logo {
-    max-width: 150px;       /* Ajuste o tamanho da logo conforme necessário */
-    margin-bottom: 15px;    /* Dá um espaço entre a logo e o texto embaixo */
 }
 
 .footer-links ul li {
