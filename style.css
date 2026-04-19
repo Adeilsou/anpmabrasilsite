@@ -201,7 +201,7 @@ h4 {
 .loader-img {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 10px;
     margin: 0 auto 20px;
     object-fit: cover;
     box-shadow: var(--shadow-md);
@@ -253,7 +253,7 @@ h4 {
 .nav-logo-img {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -568,7 +568,7 @@ h4 {
 .footer-brand .footer-logo {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 .footer-brand {
