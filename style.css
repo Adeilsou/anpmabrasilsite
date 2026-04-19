@@ -1,157 +1,335 @@
-body {
+/* ===== VARIÁVEIS DE COR E TIPOGRAFIA ===== */
+:root {
+    --primary-color: #D36A24;
+    /* Marrom Profundo */
+    --secondary-color: #ff8800;
+    /* Laranja Terreiro */
+    --accent-color: #f1b347;
+    /* Ocre */
+    --bg-light: #fdfaf6;
+    --bg-white: #ffffff;
+    --text-main: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ===== RESET & CONFIGURAÇÕES BÁSICAS ===== */
+* {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f9f6f1;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-
-    /* IMAGEM RESPONSIVA */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url('https://github.com/Adeilsou/anpmabrasilsite/blob/main/cabe%C3%A7alho.png?raw=true') center/cover no-repeat;
-    z-index: -2;
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
-@media (max-width: 768px) {
-    .hero::before {
-        background: url('https://github.com/Adeilsou/anpmabrasilsite/blob/main/cabe%C3%A7alhoP.jpeg?raw=true') center/cover no-repeat;
-    }
-}
- .hero{   
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: center;
-    color: #e07b07;
+body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    background-color: var(--bg-white);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.button {
-    width: 80%;
-    padding: 30px;
-    border-radius: 10px;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -90%);
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-h1 {
-    color: #ff7b00;
-    margin: 0px;
-}
-
-.btn {
-    background: #e67e22;
-    color: white;
-    padding: 12px 25px;
-    margin-top: 20px;
-    display: inline-block;
-    border-radius: 30px;
+a {
     text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
 }
 
-.navbar {
-    position: sticky;
-    top: 0;
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar ul {
-    display: flex;
+ul {
     list-style: none;
 }
 
-li a {
-    color: brown;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.2rem;
-}
-
-.navbar li {
-    margin-left: 20px;
-
-}
-
+/* Utilitários */
 .container {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.cards-section {
-    background: #fff;
-    padding: 60px 20px;
+.text-center {
     text-align: center;
 }
 
-.cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+.text-left {
+    text-align: left;
 }
 
-.card {
-    background: #fff3e0;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+.mt-2 {
+    margin-top: 1rem;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+.mt-4 {
+    margin-top: 2rem;
 }
 
-.grid-item {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+.bg-light {
+    background-color: var(--bg-light);
 }
 
-.cta {
-    background: #8b4513;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+/* Tipografia */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
 }
 
-footer {
-    background: #726653;
-    color: white;
-    text-align: center;
-    padding: 0.1px;
+.section-subtitle {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }
 
-/* animação */
-.fade {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 1s;
+.section-desc {
+    max-width: 700px;
+    margin: 15px auto;
+    color: var(--text-light);
+    font-size: 1.1rem;
 }
 
-.fade.show {
-    opacity: 1;
-    transform: translateY(0);
+.social-icons a i {
+    font-size: 1.2rem;
+    /* Aumenta um pouco o tamanho do logo */
+    line-height: 1;
+    /* Centraliza o ícone perfeitamente */
 }
 
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
 
-footer a {
-    color: #ff8a04;
+.btn-primary {
+    background: var(--secondary-color);
+    color: var(--white);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--secondary-color);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-nav {
+    background: var(--primary-color);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.btn-nav:hover {
+    background: var(--secondary-color);
+}
+
+/* Estilo para o crédito do desenvolvedor */
+.dev-link {
+    color: var(--secondary-color) !important;
+    /* Aplica o laranja do tema */
+    font-weight: 600;
     text-decoration: none;
+    transition: var(--transition);
 }
-/* MOBILE MENU */
-@media (max-width: 768px) {
 
+.dev-link:hover {
+    filter: brightness(1.2);
+    /* Dá um leve brilho ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* ===== LOADER PROFISSIONAL ===== */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#loader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    box-shadow: var(--shadow-md);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(211, 106, 36, 0.2);
+    border-left-color: var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Menu Desktop */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Menu Hambúrguer (Oculto no Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: var(--transition);
+    transform-origin: left center;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* Overlay Mobile */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    transition: var(--transition);
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== RESPONSIVIDADE - MENU MOBILE (AQUI ESTAVA O BUG) ===== */
+@media (max-width: 860px) {
     .menu-toggle {
         display: flex;
     }
@@ -161,18 +339,298 @@ footer a {
         top: 0;
         right: -100%;
         width: 80%;
-        height: 100%;
-        background: var(--marrom);
+        max-width: 350px;
+        height: 100vh;
+        background: var(--bg-white);
         flex-direction: column;
-        padding-top: 80px;
-        transition: 0.4s;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        z-index: 1001;
     }
 
     .nav-links.active {
         right: 0;
     }
 
-    .nav-links {
-        will-change: transform, opacity;
+    .nav-links a {
+        font-size: 1.2rem;
     }
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    padding: 80px 20px 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('arte-anpma-brasil.jpg') center/cover no-repeat fixed;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(92, 48, 24, 0.733), rgba(59, 37, 0, 0.651));
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 1;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== SEÇÕES GERAIS ===== */
+.section {
+    padding: 100px 0;
+}
+
+/* Layout Grid (Sobre) */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image img {
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.mission-box {
+    background: var(--bg-white);
+    padding: 30px;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 0 12px 12px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.mission-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 900px) {
+    .layout-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .mission-box {
+        border-left: none;
+        border-top: 5px solid var(--secondary-color);
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+/* Cards Grid (Atuação) */
+.highlight-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.highlight-section h2,
+.highlight-section .section-subtitle,
+.highlight-section .section-desc {
+    color: var(--white);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    color: var(--text-main);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Estrutura Grid */
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.role-card {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border-top: 4px solid;
+}
+
+.border-green {
+    border-color: #4f7942;
+}
+
+.border-orange {
+    border-color: var(--secondary-color);
+}
+
+.border-blue {
+    border-color: #2c5282;
+}
+
+.role-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(rgba(211, 106, 36, 0.9), rgba(211, 106, 36, 0.9)), url('arte-anpma-brasil.jpg') center/cover fixed;
+    color: var(--white);
+}
+
+.cta-section h2 {
+    color: var(--white);
+    font-size: 2rem;
+    max-width: 900px;
+    margin: 0 auto 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #2c1a10;
+    color: #dcdcdc;
+    padding: 60px 0 20px;
+    font-size: 0.95rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer h4 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-brand .footer-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.footer-links ul li::before {
+    content: '•';
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.contact-link:hover {
+    color: var(--secondary-color);
+}
+
+.social-icons a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin-right: 10px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.social-icons a:hover {
+    background: var(--secondary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+}
+
+/* ===== ANIMAÇÕES COM INTERSECTION OBSERVER ===== */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-up.show,
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
