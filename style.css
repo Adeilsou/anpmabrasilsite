@@ -17,7 +17,7 @@ body {
 
 @media (max-width: 768px) {
     .hero::before {
-        background: url('anapma-brasil-logo.png') center/cover no-repeat;
+        background: url('https://github.com/Adeilsou/anpmabrasilsite/blob/main/cabe%C3%A7alhoP.jpeg?raw=true') center/cover no-repeat;
     }
 }
  .hero{   
