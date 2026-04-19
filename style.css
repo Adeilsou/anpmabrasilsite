@@ -11,7 +11,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('arte-anpma-brasil.png') center/cover no-repeat;
+    background: url('https://github.com/Adeilsou/anpmabrasilsite/blob/main/cabe%C3%A7alho.png?raw=true') center/cover no-repeat;
     z-index: -2;
 }
 
