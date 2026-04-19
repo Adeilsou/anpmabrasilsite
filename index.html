@@ -4,139 +4,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANPMA BRASIL</title>
 
-    <link rel="stylesheet" href="style.css">
+    <title>ANPMA Brasil | Articulação Nacional de Povos de Matrizes Africanas e Ameríndias</title>
+
+    <meta name="description"
+        content="A ANPMA Brasil é um movimento social comprometido com a defesa dos direitos, da dignidade e da valorização cultural dos povos tradicionais e comunidades de terreiro em todo o Brasil.">
+    <meta name="keywords"
+        content="ANPMA Brasil, povos tradicionais, matriz africana, ameríndia, cultura afro-brasileira, direitos humanos, combate ao racismo religioso, terreiro, axé">
+    <meta name="author" content="ANPMA Brasil">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="ANPMA Brasil | Povos Tradicionais e Cultura Afro-Brasileira">
+    <meta property="og:description"
+        content="Articulação nacional comprometida com a defesa da ancestralidade, liberdade religiosa e justiça social dos povos tradicionais.">
+    <meta property="og:image" content="arte-anpma-brasil.jpg">
+    <meta property="og:url" content="https://www.anpmabrasil.org.br">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ANPMA Brasil">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ANPMA Brasil | Defesa dos Povos Tradicionais">
+    <meta name="twitter:description"
+        content="Unir, fortalecer e representar é o nosso axé! Luta coletiva pelos povos de terreiro.">
+    <meta name="twitter:image" content="arte-anpma-brasil.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.anpmabrasil.org.br">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Estilos -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <header class="hero">
-        <div class="hero-content">
-            <div class="button">
-
-                <a href="https://www.instagram.com/anpmabrasil/" target="_blank" class="btn">Junte-se ao movimento</a>
-                <h2>Uma articulação nacional em defesa dos povos tradicionais</h2>
-            </div>
+    <!-- LOADER PROFISSIONAL -->
+    <div id="loader">
+        <div class="loader-content">
+            <img src="anapma-brasil-logo.jpg" alt="Logo ANPMA Brasil" class="loader-img">
+            <div class="spinner"></div>
+            <h2>Carregando...</h2>
         </div>
-    </header>
+    </div>
 
+    <!-- NAVBAR OTIMIZADA -->
     <nav class="navbar">
-        <h1>ANPMA BRASIL</h1>
-        <ul class="lista-marrom">
-            <li><a href="https://www.anpmabrasil.org.br/sobre">Sobre</a></li>
-            <li><a href="https://www.anpmabrasil.org.br/missao">Missão</a></li>
-            <li><a href="https://www.anpmabrasil.org.br/impacto">Atuação</a></li>
-            <li><a href="https://www.anpmabrasil.org.br/coordenacao">Coordenação</a></li>
-            <li><a href="https://www.anpmabrasil.org.br/contato">Contato</a></li>
-        </ul>
+        <div class="nav-container">
+            <a href="#" class="logo-link">
+                <img src="anapma-brasil-logo.jpg" alt="Logo ANPMA" class="nav-logo-img">
+                <span class="logo-text">ANPMA - BRASIL</span>
+            </a>
+
+            <!-- Menu Hambúrguer -->
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" role="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#atuacao">Nossa Atuação</a></li>
+                <li><a href="#estrutura">Estrutura</a></li>
+                <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <section id="sobre" class="container fade">
-        <h2>Sobre a ANPMA-BRASIL</h2>
-        <p>
-            A ANPMA Brasil é um movimento social de articulação política e institucional
-            que atua na defesa dos direitos, da dignidade e da valorização cultural dos povos
-            de matrizes africanas e ameríndias.
-        </p>
+    <!-- OVERLAY DO MENU MOBILE -->
+    <div class="overlay" id="overlay"></div>
 
-        <p>
-            Não somos federação. Somos resistência. Somos ancestralidade em movimento.
-        </p>
-    </section>
+    <main>
+        <!-- HERO SECTION -->
+        <section id="inicio" class="hero fade-in">
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-up">
+                <h1>Unir, Fortalecer e Representar é o Nosso Axé!</h1>
+                <p>Articulação, políticas públicas e resistência para os povos de axé e de lutas ancestrais em todo o
+                    Brasil.</p>
+                <div class="hero-buttons">
+                    <a href="#sobre" class="btn btn-primary">Conheça o Movimento</a>
+                    <a href="#contato" class="btn btn-outline">Junte-se a Nós</a>
+                </div>
+            </div>
+        </section>
 
-    <section id="missao" class="cards-section">
-        <h2>Nossa Missão e Valores</h2>
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre" class="section about-section bg-light">
+            <div class="container layout-grid">
+                <div class="about-image fade-in">
+                    <img src="arte-anpma-brasil.jpg"
+                        alt="Mulher negra com turbante e tambor representando a cultura afro-brasileira" loading="lazy">
+                </div>
+                <div class="about-text fade-up">
+                    <span class="section-subtitle">Quem Somos</span>
+                    <h2>Somos Resistência, Organização e Luta Coletiva</h2>
+                    <p>A <strong>ANPMA Brasil</strong> é um movimento social de articulação política e institucional,
+                        comprometido com a defesa dos direitos, da dignidade e da valorização cultural dos povos e
+                        comunidades tradicionais de matrizes africanas e ameríndias.</p>
+                    <p>Não somos federação religiosa, tampouco uma entidade voltada à disputa interna entre casas ou
+                        terreiros. Nosso papel é fortalecer a luta coletiva, promover o diálogo com os poderes públicos
+                        e combater o racismo religioso e a intolerância.</p>
 
-        <div class="cards">
+                    <div class="mission-box mt-4">
+                        <h3>Nossa Missão</h3>
+                        <p>Defender a ancestralidade, a liberdade religiosa, a cultura afro-indígena, o turismo de base
+                            comunitária, a economia solidária e a justiça social.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <div class="card">
-                <h3>Missão</h3>
-                <p>Unir, fortalecer e representar comunidades tradicionais com justiça social.</p>
+        <!-- SEÇÃO ATUAÇÃO -->
+        <section id="atuacao" class="section highlight-section">
+            <div class="container text-center fade-up">
+                <span class="section-subtitle">O Que Fazemos</span>
+                <h2>Nossa Atuação</h2>
+                <p class="section-desc">Pautamos a articulação de políticas públicas para garantir direitos
+                    fundamentais.</p>
+
+                <div class="cards-grid mt-4">
+                    <div class="card fade-up" style="transition-delay: 0.1s;">
+                        <div class="card-icon">✊🏾</div>
+                        <h3>Direitos e Território</h3>
+                        <p>Defesa intransigente dos direitos humanos e territoriais das comunidades tradicionais.</p>
+                    </div>
+                    <div class="card fade-up" style="transition-delay: 0.2s;">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Combate ao Racismo</h3>
+                        <p>Enfrentamento ativo ao racismo religioso e à intolerância em todas as suas formas.</p>
+                    </div>
+                    <div class="card fade-up" style="transition-delay: 0.3s;">
+                        <div class="card-icon">🌱</div>
+                        <h3>Cultura e Economia</h3>
+                        <p>Incentivo à cultura, turismo de base comunitária e economia solidária e criativa.</p>
+                    </div>
+                    <div class="card fade-up" style="transition-delay: 0.4s;">
+                        <div class="card-icon">⚖️</div>
+                        <h3>Justiça Social</h3>
+                        <p>Garantia de acesso à saúde, educação, cidadania e valorização dos saberes tradicionais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO ESTRUTURA -->
+        <section id="estrutura" class="section bg-light">
+            <div class="container text-center fade-up">
+                <span class="section-subtitle">Organização</span>
+                <h2>Estrutura do Movimento</h2>
+                <p class="section-desc">Atuamos em rede, valorizando a liderança e a autonomia de cada município e
+                    região.</p>
+
+                <div class="roles-grid mt-4 text-left">
+                    <div class="role-card fade-up border-green">
+                        <h3>Papel do Coordenador Municipal</h3>
+                        <p>Organizar, mobilizar e articular ações no seu município, ouvindo os terreiros e construindo
+                            agendas coletivas junto às instituições.</p>
+                    </div>
+                    <div class="role-card fade-up border-orange">
+                        <h3>Quem Pode Coordenar?</h3>
+                        <p>Pessoas de axé comprometidas com a luta coletiva. Não é obrigatório ser
+                            sacerdote/sacerdotisa, mas ter respeito e anuência da comunidade.</p>
+                    </div>
+                    <div class="role-card fade-up border-blue">
+                        <h3>Coordenadores Regionais</h3>
+                        <p>Acompanhar e integrar núcleos municipais, promovendo formação política e dialogando com
+                            governos e órgãos públicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CTA -->
+        <section class="section cta-section text-center fade-in">
+            <div class="container">
+                <h2>Onde houver um terreiro ou povo invisibilizado, ali deve estar a força da articulação popular!</h2>
+                <p>Por um Brasil plural, justo e livre de intolerância.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER INSTITUCIONAL -->
+    <footer id="contato" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="anapma-brasil-logo.jpg" alt="Logo ANPMA Brasil" class="footer-logo">
+                <p>Articulação Nacional de Povos de Matrizes Africanas e Ameríndias.</p>
             </div>
 
-            <div class="card">
-                <h3>Valores</h3>
+            <div class="footer-links">
+                <h4>Nossos Valores</h4>
                 <ul>
                     <li>Ancestralidade</li>
                     <li>Liberdade Religiosa</li>
+                    <li>Respeito à Diversidade</li>
                     <li>Justiça Social</li>
-                    <li>Respeito à diversidade</li>
+                    <li>Organização Popular</li>
                 </ul>
             </div>
 
-            <div class="card">
-                <h3>Visão</h3>
-                <p>Um Brasil plural, justo e livre de intolerância religiosa.</p>
+            <div class="footer-contact">
+                <h4>Contatos</h4>
+                <p><a href="mailto:contato@anpmabrasil.org.br" class="contact-link">contato@anpmabrasil.org.br</a></p>
+                <p><a href="https://www.anpmabrasil.org.br" target="_blank" rel="noopener"
+                        class="contact-link">www.anpmabrasil.org.br</a></p>
+
+                <div class="social-icons mt-2">
+                    <a href="https://www.instagram.com/anpma.brasil" target="_blank" rel="noopener"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/anpmabrasiloficial" target="_blank" rel="noopener"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
             </div>
-
         </div>
-    </section>
-
-    <section id="impacto" class="container highlight fade">
-        <h2>Nossa Atuação</h2>
-
-        <div class="grid">
-
-            <div class="grid-item">🛡️ Defesa de direitos humanos</div>
-            <div class="grid-item">✊ Combate ao racismo religioso</div>
-            <div class="grid-item">🌱 Cultura e economia solidária</div>
-            <div class="grid-item">🏥 Saúde e educação</div>
-            <div class="grid-item">🌍 Valorização da ancestralidade</div>
-
         </div>
-    </section>
-
-    <section id="coordenacao" class="container fade">
-        <h2>Estrutura de Coordenação</h2>
-
-        <p>
-            Coordenadores municipais, regionais e estaduais atuam na articulação política,
-            mobilização social e fortalecimento das comunidades.
-        </p>
-
-        <ul>
-            <li>Mulheres de Axé</li>
-            <li>Homens de Axé</li>
-            <li>Juventude</li>
-            <li>LGBTQIA+</li>
-            <li>Cultura e Saúde</li>
-            <li>Economia Solidária</li>
-        </ul>
-
-        <p>
-            Qualquer pessoa comprometida com a luta coletiva pode participar.
-        </p>
-    </section>
-
-    <section id="cta" class="cta">
-        <h2>
-            Onde houver um povo invisibilizado,<br>
-            ali deve estar a força da articulação popular.
-        </h2>
-
-        <a href="#contato" class="btn">Participar agora</a>
-    </section>
-
-    <section id="contato" class="container">
-        <h2>Contato</h2>
-
-        <p>Email: contato@anpmabrasil.org.br</p>
-        <p>Instagram: @anpma.brasil</p>
-        <p>Site: www.anpmabrasil.org.br</p>
-    </section>
-
-    <footer>
-        <p>© 2026 ANPMA Brasil - Todos os direitos reservados</p>
-        <footer>
-            <p>Desenvolvido por: <a href="https://www.linkedin.com/in/adeilson/" target="_blank"
-                    rel="noopener noreferrer">Prof.: Adeilson</a></p>
-        </footer>
-
+        <div class="footer-bottom">
+            <p>&copy; 2026 ANPMA Brasil. Todos os direitos reservados. Estamos em movimento.</p>
+            <p>Desenvolvido por <a href="https://www.linkedin.com/in/adeilson" target="_blank" rel="noopener"
+                    class="dev-link">Prof.
+                    Adeilson Moura</a></p>
+        </div>
     </footer>
+
+    <!-- Schema.org para SEO Avançado Institucional -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "ANPMA Brasil",
+      "url": "https://www.anpmabrasil.org.br",
+      "logo": "https://www.anpmabrasil.org.br/anapma-brasil-logo.jpg",
+      "sameAs": [
+        "https://www.instagram.com/anpma.brasil",
+        "https://facebook.com/anpmabrasiloficial"
+      ],
+      "description": "Movimento social de articulação política comprometido com a defesa dos direitos dos povos e comunidades tradicionais de matrizes africanas e ameríndias.",
+      "email": "contato@anpmabrasil.org.br"
+    }
+    </script>
 
     <script src="script.js"></script>
 </body>
